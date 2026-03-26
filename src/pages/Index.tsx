@@ -6,7 +6,34 @@ import remeraImg from "@/assets/remera-basica.png";
 import remeraImg2 from "@/assets/remera-basica2.png";
 import remeraImg3 from "@/assets/remera-basica3.png";
 import remeraImg4 from "@/assets/remera-basica4.png";
-
+import remeraOvImg from "@/assets/remera-oversize.png";
+import remeraOvImg2 from "@/assets/remera-oversize2.png";
+import remeraOvImg3 from "@/assets/remera-oversize3.png";
+import remeraOvImg4 from "@/assets/remera-oversize4.png";
+import remerav from "@/assets/remera-escotev.png";
+import remerav2 from "@/assets/remera-escotev2.png";
+import remerav3 from "@/assets/remera-escotev3.png";
+import buzoc1 from "@/assets/buzo-canguro.png";
+import buzoc2 from "@/assets/buzo-canguro2.png";
+import buzoc3 from "@/assets/buzo-canguro3.png";
+import buzoc4 from "@/assets/buzo-canguro4.png";
+import buzoclas1 from "@/assets/buzo-clasico.png";
+import buzoclas2 from "@/assets/buzo-clasico2.png";
+import buzoclas3 from "@/assets/buzo-clasico3.png";
+import buzoclas4 from "@/assets/buzo-clasico4.png";
+import chombap1 from "@/assets/chomba-pique2.png";
+import chombap2 from "@/assets/chomba-pique4.png";
+import chombap3 from "@/assets/chomba-pique3.png";
+import chombap4 from "@/assets/chomba-pique.png";
+import chalecop1 from "@/assets/chaleco-polar.png";
+import chalecop2 from "@/assets/chaleco-polar4.png";
+import chalecop3 from "@/assets/chaleco-polar2.png";
+import chalecop4 from "@/assets/chaleco-polar3.png";
+import camperap1 from "@/assets/campera-polar.png";
+import camperap2 from "@/assets/campera-polar3.png";
+import camperap3 from "@/assets/campera-polar2.png";
+import gorra1 from "@/assets/gorra.png";
+import gorra2 from "@/assets/gorra2.png";
 // ============================================================
 // INSTRUCCIONES PARA AGREGAR IMÁGENES:
 // 1. Colocá tus imágenes en la carpeta src/assets/
@@ -50,10 +77,12 @@ const products = [
   {
     id: "remeras-oversize",
     title: "Remera Oversize",
-    corte: "Oversize Fit",
-    material: "100% Algodón Pima 30/1",
-    productImage: "",
-    sizeChartImage: "",
+    corte: "Unisex",
+    material: "Algodon Peinado 24/1",
+    showGallery: true,
+    productImage: [remeraOvImg2],
+    sizeChartImage: [remeraOvImg],
+    galleryImages: [remeraOvImg3, remeraOvImg4] as string[],  // ← [img1, img2]
     colors: [
       { name: "Negro", color: "#0a0a0a" },
       { name: "Blanco", color: "#ffffff" },
@@ -62,10 +91,12 @@ const products = [
   {
     id: "remeras-escote-en-v",
     title: "Remera Escote en V",
-    corte: "Regular Fit - Escote V",
-    material: "100% Algodón Pima 30/1",
-    productImage: "",
-    sizeChartImage: "",
+    corte: "Entallado dama",
+    material: "Algodon Peinado 24/1",
+    showGallery: true,
+    productImage: [remerav],
+    sizeChartImage: [remerav2],
+    galleryImages: [remerav3] as string[],
     colors: [
       { name: "Negro", color: "#0a0a0a" },
       { name: "Blanco", color: "#ffffff" },
@@ -74,104 +105,123 @@ const products = [
   {
     id: "buzos-canguro",
     title: "Buzo Canguro",
-    corte: "Regular Fit con bolsillo canguro",
-    material: "Frisa algodón 100%",
+    corte: "Unisex",
+    material: "Friza invisible 30/1",
     showGallery: true,
-    productImage: "",
-    sizeChartImage: "",
-    galleryImages: [] as string[],
+    productImage: [buzoc2],
+    sizeChartImage: [buzoc1],
+    galleryImages: [buzoc3, buzoc4] as string[],
     colors: [
       { name: "Negro", color: "#0a0a0a" },
       { name: "Blanco", color: "#ffffff" },
+      { name: "Gris Melange", color: "#deded6" },
+      { name: "Azul Marino", color: "#1a2238" },
+      { name: "Verde Militar", color: "#747a72" },
+      { name: "Verde Benneton", color: "#58777a" },
+      { name: "Gris Titanio", color: "#b2c0d8" },
+      { name: "Gris Topo", color: "#444754" },
+      { name: "Vino", color: "#ac83bc" },
+      { name: "Beige Claro", color: "#ece8df" },
+      { name: "Beige Oscuro", color: "#c9c4b0" },
+      { name: "Ladrillo", color: "#a9734e" },
+      { name: "Marron", color: "#725c57" },
     ],
   },
   {
     id: "buzos-clasico",
     title: "Buzo Clásico",
-    corte: "Regular Fit",
-    material: "Frisa algodón 100%",
+    corte: "Unisex",
+    material: "Friza invisible 30/1",
     showGallery: true,
-    productImage: "",
-    sizeChartImage: "",
-    galleryImages: [] as string[],
+    productImage: [buzoclas1],
+    sizeChartImage: [buzoclas2],
+    galleryImages: [buzoclas3, buzoclas4] as string[],
     colors: [
       { name: "Negro", color: "#0a0a0a" },
       { name: "Blanco", color: "#ffffff" },
+      { name: "Gris Melange", color: "#deded6" },
     ],
   },
   {
     id: "buzos-medio-cierre-polar",
     title: "Buzo 1/2 Cierre Polar",
-    corte: "Regular Fit con medio cierre",
-    material: "Polar anti-pilling",
+    corte: "Unisex",
+    material: "Polar",
     productImage: "",
     sizeChartImage: "",
     colors: [
       { name: "Negro", color: "#0a0a0a" },
       { name: "Blanco", color: "#ffffff" },
+      { name: "Azul", color: "#2f348c" },
     ],
   },
   {
     id: "chombas-pique",
     title: "Chomba Piqué",
-    corte: "Regular Fit",
-    material: "Piqué premium",
+    corte: "Unisex",
+    material: "Pique algodon con poliester",
     showGallery: true,
-    productImage: "",
-    sizeChartImage: "",
-    galleryImages: [] as string[],
+    productImage: [chombap1],
+    sizeChartImage: [chombap2],
+    galleryImages: [chombap3, chombap4] as string[],
     colors: [
       { name: "Negro", color: "#0a0a0a" },
       { name: "Blanco", color: "#ffffff" },
+      { name: "Azul", color: "#2f348c" },
+      { name: "Gris Melange", color: "#deded6" },
     ],
   },
   {
     id: "chalecos-polar",
     title: "Chaleco Polar",
-    corte: "Regular Fit",
-    material: "Polar anti-pilling",
+    corte: "Unisex",
+    material: "Polar",
     showGallery: true,
-    productImage: "",
-    sizeChartImage: "",
-    galleryImages: [] as string[],
+    productImage: [chalecop2],
+    sizeChartImage: [chalecop1],
+    galleryImages: [chalecop3, chalecop4] as string[],
     colors: [
       { name: "Negro", color: "#0a0a0a" },
-      { name: "Blanco", color: "#ffffff" },
+      { name: ".", color: "#f8f5e6" },
+      { name: ".", color: "#8d898a" },
+      { name: ".", color: "#2d2e42" },
     ],
   },
   {
     id: "camperas-polar",
     title: "Campera Polar",
-    corte: "Regular Fit",
-    material: "Polar anti-pilling premium",
-    productImage: "",
-    sizeChartImage: "",
+    corte: "Unisex",
+    material: "Polar",
+    showGallery: true,
+    productImage: [camperap1],
+    sizeChartImage: [camperap2],
+    galleryImages: [camperap3] as string[],
     colors: [
       { name: "Negro", color: "#0a0a0a" },
       { name: "Blanco", color: "#ffffff" },
+      { name: "Azul", color: "#2f348c" },
     ],
   },
   {
     id: "gorras-trucker",
     title: "Gorra Trucker",
-    corte: "Ajustable",
-    material: "Frente algodón / Malla trasera",
-    productImage: "",
-    sizeChartImage: "",
+    corte: "Gorra Trucker",
+    material: "Trucker",
+    productImage: [gorra2],
+    sizeChartImage: [gorra1],
     colors: [
       { name: "Negro", color: "#0a0a0a" },
-      { name: "Blanco", color: "#ffffff" },
-    ],
-  },
-  {
-    id: "tazas-ceramica-aaa",
-    title: "Taza Cerámica AAA",
-    corte: "—",
-    material: "Cerámica calidad AAA",
-    productImage: "",
-    sizeChartImage: "",
-    colors: [
-      { name: "Blanco", color: "#ffffff" },
+      { name: ".", color: "#dcaeb8" },
+      { name: ".", color: "#91836c" },
+      { name: ".", color: "#52061e" },
+      { name: ".", color: "#740000" },
+      { name: ".", color: "#1f1c12" },
+      { name: ".", color: "#1c202d" },
+      { name: ".", color: "#0f174f" },
+      { name: ".", color: "#669ac4" },
+      { name: ".", color: "#2b2d36" },
+      { name: ".", color: "#979a99" },
+      { name: ".", color: "#9c9793" },
     ],
   },
 ];
